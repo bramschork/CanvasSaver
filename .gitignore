@@ -1,0 +1,24 @@
+# Virtual environments
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# dotenv environment variables
+.env
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Vim swap files
+*.swp
+
+# macOS
+.DS_Store
+
+downloads/
