@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>CanvasSaver Web</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>CanvasSaver Web</h1>
+
+    <div class="config">
+      <label
+        >Canvas URL:
+        <input
+          id="canvas-url"
+          type="text"
+          value="https://caltech.instructure.com"
+          placeholder="https://yourinstitution.instructure.com"
+        />
+      </label>
+      <label
+        >API Token:
+        <input
+          id="api-token"
+          type="password"
+          placeholder="Paste your token here"
+        />
+      </label>
+      <fieldset>
+        <legend>Which courses?</legend>
+        <label
+          ><input type="radio" name="filter" value="all" checked /> All ever
+          taken</label
+        >
+        <label
+          ><input type="radio" name="filter" value="current" /> Current term
+          only</label
+        >
+        <label
+          ><input type="radio" name="filter" value="specific" /> Specific
+          term(s)</label
+        >
+        <select id="term-select" multiple size="4" hidden></select>
+      </fieldset>
+      <button id="load-btn">Load Courses</button>
+    </div>
+
+    <div class="actions">
+      <button id="download-btn" disabled>Download Selected</button>
+      <button id="cancel-btn" disabled>Cancel</button>
+    </div>
+
+    <p id="status">No courses loaded.</p>
+    <p id="progress"></p>
+
+    <table id="courses-table" hidden>
+      <thead>
+        <tr>
+          <th>Course</th>
+          <th>Modules</th>
+          <th>Syllabus</th>
+          <th>Pages</th>
+          <th>Submissions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
+</html>
